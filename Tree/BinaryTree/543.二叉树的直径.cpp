@@ -18,14 +18,17 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
+
 class Solution {
     int maxVal = 0;
     int maxDepth(TreeNode* node){
-        if(!node){
-            return 0;
+        int leftDepth = 0, rightDepth = 0;
+        if(node->left){ //提前过滤掉不应该继续递归的解，可以减少递归栈的长度
+            leftDepth = maxDepth(node->left);
         }
-        int leftDepth = maxDepth(node->left);
-        int rightDepth = maxDepth(node->right);
+        if(node->right){
+            rightDepth = maxDepth(node->right);
+        }
         maxVal = max(maxVal, leftDepth+rightDepth);
         return max(leftDepth,rightDepth)+1;
     }
