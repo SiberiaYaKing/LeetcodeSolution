@@ -1,22 +1,11 @@
 {
     "files.associations": {
-        "queue": "cpp",
-        "xutility": "cpp",
-        "vector": "cpp",
-        "deque": "cpp",
-        "initializer_list": "cpp",
-        "list": "cpp",
-        "ranges": "cpp",
-        "span": "cpp",
-        "type_traits": "cpp",
-        "xhash": "cpp",
-        "xstring": "cpp",
-        "iostream": "cpp",
         "xiosbase": "cpp",
-        "stack": "cpp",
-        "ios": "cpp",
-        "utility": "cpp",
+        "algorithm": "cpp",
+        "ranges": "cpp",
+        "xmemory": "cpp",
+        "xtree": "cpp",
         "ostream": "cpp",
-        "set": "cpp"
+        "iostream": "cpp"
     }
 }
