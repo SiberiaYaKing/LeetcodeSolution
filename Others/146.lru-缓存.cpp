@@ -5,6 +5,35 @@
  */
 
 // @lc code=start
+class Node{
+public:
+    Node* prev;
+    Node* next;
+    int value;
+    int key;
+    Node(int _k, int _v):key(_k),value(_v),prev(nullptr),next(nullptr){}
+};
+
+class DoubleLinkList{
+    Node* last;
+public:
+    int size;
+    DoubleLinkList():size(0){}
+    void PushNode(Node* node){
+        if(!node) {return;}
+        node->prev = last;
+        last = node;
+        size ++;
+    }
+
+    void RemoveNode(Node* node){
+        if(!node) {return;}
+        node->prev->next = nullptr;
+        
+        size--;
+    }
+};
+
 class LRUCache {
 public:
     LRUCache(int capacity) {
