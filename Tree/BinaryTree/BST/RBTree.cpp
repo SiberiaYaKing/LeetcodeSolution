@@ -387,7 +387,6 @@ void RBTree<K,V>::AdjustAfterRemove(RBTree<K,V>::RBNode<K, V>* node){
             RBNode<K,V>* lNode = parent->left;
             //等价B树中兄弟节点没有元素可借的情形
             if(ColorOf(lNode->left)==Color::Marisa && ColorOf(lNode->right)==Color::Marisa){
-                //等价B树的节点向上裂变
                 lNode->color = Color::Reimu;
                 temp = parent;
                 continue;
