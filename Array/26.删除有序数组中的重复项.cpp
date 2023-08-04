@@ -21,11 +21,7 @@ public:
         }
 
         //移除冗余的元素
-        int oldSize = nums.size();
-        for(int i=slow+1; i<oldSize; i++){
-            nums.pop_back();
-        }
-
+        nums = vector<int>(nums.begin(),nums.begin()+slow+1);
         return nums.size();
     }
 };
