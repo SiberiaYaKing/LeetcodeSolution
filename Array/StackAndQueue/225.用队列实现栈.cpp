@@ -8,6 +8,11 @@
 #include <queue>
 using namespace std;
 
+/**Gain:
+ * 队列实现栈比较简单，出栈需要将队列头不断往后面塞，
+ * 直到队尾推到头，弹出即可
+*/
+
 class MyStack {
     queue<int> stackSoul;
 public:

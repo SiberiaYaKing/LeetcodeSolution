@@ -8,6 +8,11 @@
 #include <stack>
 using namespace std;
 
+/**Gain:
+ * 栈实现队列比较巧妙，需要使用两个栈
+ * 一个栈模拟入队，另一个栈模拟出队，
+ * 将入队元素从栈A弹出，再塞到栈B，栈B的顶部便是队尾
+*/
 class MyQueue {
     stack<int> queuePush;
     stack<int> queuePop;
