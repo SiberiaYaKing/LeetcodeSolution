@@ -9,6 +9,9 @@
 #include <string>
 using namespace std;
 
+/* Gain:
+ * 这是利用回文串的数学性质和哈希表解决问题，哈希表用来计数，注意回文串的中心可能是偶数个重复字符
+ */
 class Solution {
 public:
     int longestPalindrome(string s) {

@@ -4,6 +4,9 @@
  * [5] 最长回文子串
  */
 
+/* Gain:
+ * 以每个字符为中心，向两边散开的双指针找回文串
+ */
 // @lc code=start
 #include <string>
 using namespace std;

@@ -8,6 +8,9 @@
 #include <vector>
 using namespace std;
 
+/* Gain:
+ * 常规的左右向中心移动的双指针解法
+ */
 class Solution {
 public:
     void reverseString(vector<char>& s) {
@@ -17,7 +20,7 @@ public:
             s[left] = s[right];
             s[right] = temp;
             left++;
-        right--;
+            right--;
         }
     }
 };

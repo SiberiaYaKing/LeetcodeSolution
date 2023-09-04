@@ -8,6 +8,10 @@
 #include <vector>
 using namespace std;
 
+
+/* Gain:
+ * 滑动窗口双指针，注意窗口收缩的时机和幅度
+ */
 class Solution {
 public:
     void moveZeroes(vector<int>& nums) {

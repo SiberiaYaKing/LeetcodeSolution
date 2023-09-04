@@ -4,6 +4,10 @@
  * [1] 两数之和
  */
 
+/* Gain:
+ * 最佳题解是用集合存储数据，看看每个数减出来的差是否找得到，
+ * 但其实还有左右向中心靠拢的双指针解法，前提是数列需要排序
+ */
 // @lc code=start
 #include <vector>
 #include <algorithm>
@@ -17,20 +21,21 @@ public:
         vector<int> tempNums = nums;
         sort(tempNums.begin(),tempNums.end());
         while(left!=right) {
-            num1 = tempNums[left], num2 = tempNums[right];
-            if(tempNums[right]+tempNums[left]>target){
+            num1 = tempNums[left];
+            num2 = tempNums[right];
+            if(num1+num2>target){
                 right--;
-            } else if(tempNums[right]+tempNums[left]<target){
+            } else if(num1+num2<target){
                 left++;
-            } else if(tempNums[right]+tempNums[left]==target){
+            } else if(num1+num2==target){
                 break;
             }
         }
         
+        //需要在原数组中找到对应的索引
         left = find(nums.begin(),nums.end(),num1)-nums.begin();
         right = nums.rend()-find(nums.rbegin(),nums.rend(),num2)-1;
         return {left, right};
     }
 };
 // @lc code=end
-

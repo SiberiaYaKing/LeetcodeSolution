@@ -49,6 +49,7 @@ public:
             p2 = p2->next;
         }
 
+        //将环断开
         lastNode->next = nullptr;
         return p2;
 
